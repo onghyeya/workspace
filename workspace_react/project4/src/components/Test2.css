@@ -1,0 +1,31 @@
+table{
+  width: 500px;
+  height: 350px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+tbody>tr,td{
+  border: 1px solid black;
+}
+
+tbody td:first-child{
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: lightsteelblue;
+}
+
+tbody td:last-child{
+  width: 70%;
+  padding-left: 10px;
+  padding-bottom: 3px;
+}
+
+input:hover{
+  cursor: pointer;
+}
+
+input:focus{
+  outline: none;
+}

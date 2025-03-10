@@ -1,0 +1,30 @@
+
+.item_detail{
+  text-align: right;
+}
+.item_detail>h3{
+  text-align: left;
+}
+.item_detail>table{
+  width: 100%;
+}
+.item_detail tr{
+  border-bottom: 1px solid cadetblue;
+  border-top: 1px solid cadetblue;
+}
+.item_detail td{
+  padding: 10px;
+}
+.item_detail tbody td:first-child{
+  background-color: rgba(75, 134, 136, 0.692);
+  text-align: center;
+  color: white;
+  vertical-align: middle;
+}
+.item_detail tbody td:last-child{
+  background-color: rgb(229, 239, 240);
+  text-align: left;
+}
+
+
+

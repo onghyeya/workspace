@@ -1,0 +1,159 @@
+.container{
+  width: 1200px;
+  margin: 0px auto;
+}
+
+.title{
+  width: 100%;
+  height: 100px;
+  background-color: #0c51a6;
+  padding-left: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title>h2>a{
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+
+}
+
+.menu{
+  width: 50%;
+}
+
+.menu>ul{
+  background-color: rgb(0,0,0,0.1);
+  height: 50px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu>ul>li>a{
+  color: white;
+  text-decoration: none;
+}
+
+.img-box{
+  width: 100%;
+  
+  position: relative;
+}
+
+.img-box>img{
+  width: 100%;
+  /* 인라인 요소는 글자로 인식 */
+}
+
+img{
+  height: 100%;
+  display: block;
+}
+
+.img-box>div{
+  width:30%;
+  padding: 10px;
+  background-color:rgb(0, 0, 0,0.3);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%,-50%);
+}
+
+.img-box>h2{
+  font-size: 2.5rem;
+}
+
+.detail{
+  /* flex로 각 아이템에게 flex-grow를 주면 됨 */
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.detail-1{
+  padding: 15px;
+  background-color: #e5f1ff;
+}
+
+.detail-1>div>a{
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content:space-between;
+}
+
+.detail-1>h2{
+  margin-bottom: 15px;
+}
+
+.detail-1>h2>a{
+  color: black;
+  text-decoration: none;
+}
+
+.detail-2{
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.detail-2>div{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.detail-2>div>button{
+  border: none;
+  background-color: rgb(0,0,0,0.4);
+  border-radius: 16px;
+  padding: 10px 20px;
+  color: white;
+  margin-top: 10px;
+}
+
+.detail-2>div>button:hover{
+  background-color: rgb(0, 0, 0,0.3);
+  cursor: pointer;
+}
+
+.bottom{
+  height: 100px;
+  background-color: #e7e7e7;
+  padding: 10px 20px;
+  
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-content: center;
+}
+
+.bottom>h1{
+  margin-top: 10px;
+  margin-left: 20px;
+  color: gray;
+}
+
+
+.bottom>div>p{
+  margin-bottom: 10px;
+  text-align: center;
+}

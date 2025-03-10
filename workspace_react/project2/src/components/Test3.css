@@ -1,0 +1,14 @@
+.bnt{
+  margin-right: 50px;
+}
+.ad{
+  width: 400px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  padding: 5px;
+  background-color: red;
+  color: white;
+}

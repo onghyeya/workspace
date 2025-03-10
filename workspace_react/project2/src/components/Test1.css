@@ -1,0 +1,11 @@
+
+.count{
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 2rem;
+  background-color: red;
+  color: white;
+  margin-bottom: 10px;
+}

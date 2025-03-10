@@ -1,0 +1,59 @@
+/* vh : veiwport height 내용물이 보이는 영역
+/* vw : veiwport width 내용물이 보이는 영역
+  100vw : 스크롤까지 포함한 영역
+  100% : 스크롤 너비는 제외
+  100vh : 눈에 보이는 화면의 100%
+  50vh : 눈에 보이는 화면의 50%
+*/
+
+.container{
+  height: 100vh; 
+  width: 100%;
+  background-color: #caf4ff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.member{
+  width: 400px;
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px;
+  transition: all 0.5s;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.member:hover{
+  scale: 1.1;
+}
+
+img{
+  width: 20%;
+  border-radius: 50%;
+  border: 1px solid rgb(160, 160, 160);
+}
+
+.detail{
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name{
+  font-weight: 600;
+}
+
+.email{
+  color: #888;
+  font-size: 0.9rem;
+}

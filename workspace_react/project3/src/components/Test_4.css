@@ -1,0 +1,32 @@
+table{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+thead th:first-child{
+  width: 8%;
+}
+
+thead th:last-child{
+  width: 10%;
+}
+
+th{
+  border: 1px solid black;
+  padding: 5px;
+  width: 16.6%;
+}
+
+tbody td:first-child{
+  width: 8%;
+}
+
+tbody td:last-child{
+  width: 10%;
+}
+
+td{
+  width: 16.6%;
+}
+
+

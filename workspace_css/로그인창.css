@@ -1,0 +1,83 @@
+
+.container{
+  padding: 20px;
+  width: 70%;
+  margin: 30px auto;
+  border: 1px solid rgb(177, 173, 173);
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px lightgray;
+}
+
+hr{
+  margin-bottom: 8px;
+}
+
+.left_box{
+  padding: 6px;
+  display: inline-block;
+  width: 49%;
+  background-color: rgb(225, 221, 221);
+  border-radius: 4px;
+}
+
+.left_box span{
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.left_input{
+  width: 100%;
+  margin-bottom: 8px;
+  border: lightslategray;
+  border-radius: 4px;
+  
+}
+
+.bnt_1 > button{
+  padding: 4px 25px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 8px;
+  color: aliceblue;
+  background-color: rgb(220, 105, 105);
+  font-size: 0.7rem;
+}
+
+
+.right_box{
+  display: inline-block;
+  width: 49%;
+}
+
+
+.right_box>div{
+  font-size: 0.7rem;
+  margin-bottom: 3px;
+}
+
+i{
+  color: rgb(39, 208, 39);
+}
+
+.bnt_2>button{
+  width: 100%;
+  border-radius: 4px;
+  color: aliceblue;
+  border: none;
+  background-color: skyblue;
+  padding: 6px;
+  font-size: 0.6rem;
+}
+
+.right_box p{
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.center_text>p{
+  text-align: center;
+  font-size: 0.6rem;
+  margin: 10px;
+  color: rgb(62, 146, 62);
+}

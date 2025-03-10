@@ -1,0 +1,86 @@
+/* 
+  가상 클래스 : 가상의 선택자
+  :(콜론)뒤에 들어오는 것
+  p:first-child{}
+  p:nth-child(){}
+
+  쉬운 결론 
+  클론 하나는 css2 문법
+  클론 두개는 css3 문법
+  호환성을 위해 클론 하나 쓰면 된다!
+  > vscode에서 자동완성 되는대로 써라.
+
+  부가 설명
+  css3에서 가상요소(::)와 가상 클래스(:)를 구분하기 위해 추가.
+
+  가상요소 : 실제로 존재하지 않는 요소에 스타일을 적용할때 사용
+           - before, after
+           - first-line : 요소의 첫번째 줄
+           - first-letter : 요소의 첫번째 글자
+  가상클래스 : 요소의 상태나 조건에 따라 스타일을 적용할때 사용
+            - hover,focus,nth-child(),first-child 등등
+
+  ::before,::after >> 유지보수(수정작업) 용이
+  
+*/
+
+div{
+  width: 150px;
+  height: 150px;
+  background-color: cadetblue;
+  color: white;
+  border: 1px solid black;
+  font-size: 2rem;
+  margin: 30px;
+  text-align: center;
+  line-height: 150px;
+
+  /* 변환 : 어떤거에? 몇초 */
+  transition: all 1s;
+}
+
+/* 마우스 올릴 때 */
+.d1:hover{
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+}
+
+.d2:hover{
+  background-color: rgb(4, 63, 44);
+  color: rgb(138, 171, 82);
+}
+
+input{
+  width: 150px;
+  margin-left: 30px;
+  /* 클릭했을때 검정 실선을 제거 */
+  outline: none;
+
+  transition: all 1s;
+}
+/* 클릭됐을때 */
+input:focus{
+  width: 300px;
+  border: 1.5px solid green;
+  border-radius: 3px;
+}
+
+/* 선택자 앞에 인라인 요소를 추가 */
+.li-1:before{
+  /* 추가할 요소 */
+  content: "new";
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 6px;
+  padding: 3px 6px;
+  margin-right: 6px;
+}
+
+.li-1:after{
+  content: "css";
+  color: cadetblue;
+  font-weight: bold;
+  margin-left: 6px;
+  font-size: 1.2rem;
+}

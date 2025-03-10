@@ -1,0 +1,22 @@
+body{
+  background-color: cadetblue;
+}
+
+.h1{
+  border: 1px solid black;
+  width: 500px;
+}
+.bbb{
+  border: 1px solid red;
+}
+.ccc{
+  width: 300px;
+  border: 1px solid violet;
+  /* 인라인으로 변경 */
+  display: inline;
+}
+.ddd{
+  width: 300px;
+  border: 1px solid blue;
+  display: block;
+}

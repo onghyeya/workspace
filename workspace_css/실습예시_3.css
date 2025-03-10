@@ -1,0 +1,46 @@
+
+table{
+  border: 2px solid black;
+  border-collapse: collapse;
+  width: 800px;
+  /* auto : 좌우 마진 동일하게 맞춤 (블록태그를 정렬하는게 핵심임) */
+  margin: 20px auto;
+}
+
+
+/* tr,td태그에 모두 적용 */
+tr,td{
+  border: 1px solid black;
+}
+
+td{
+  padding: 4px;
+}
+
+.title-tr{
+  background-color: darkcyan;
+  text-align: center;
+}
+
+.b-span{
+  font-weight: bold;
+}
+
+.red-span{
+  color: red;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.btn-div{
+  text-align: center;
+}
+
+.birth{
+  width: 60px;
+}
+
+/* 특정자식을 선택하는 방법 */
+tr > td:nth-child(1){
+  text-align: center;
+}

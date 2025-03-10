@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼 실습</title>
+</head>
+<body>
+
+  <h2>Sign Up</h2>
+
+  <p><b>Become a member of Anderew's Company, enjoy avariety of benefits.</b></p>  <hr>
+  <!-- 강사님과 같이 만든 폼 -->
+
+
+<table>
+
+  <tr>
+    <td>Name</td>
+    <td><input type="text"></td>
+  </tr>
+
+  <tr>
+    <td>ID</td>
+    <td><input type="text"></td>
+  </tr>
+  
+  <tr>
+    <td>Password</td>
+    <td><input type="password"></td>
+  </tr>
+  
+  <tr>
+    <td>Confirm Password</td>
+    <td><input type="password"></td>
+  </tr>
+  
+  <tr>
+    <td>Moblie</td>
+    <td>
+      <select name="" id="">
+        <option value="">010</option>
+        <option value="">011</option>
+        <option value=""  selected>012</option>
+      </select>
+      <input type="text"> - <input type="text">
+    </td>
+  </tr>
+  
+  <tr>
+    <td>E-mail</td>
+    <td>
+      <input type="text"> @ <input type="text">
+        <select name="" id="">
+          <option value="">Direct input</option>
+          <option value="">gmail.com</option>
+          <option value="">naver.com</option>
+        </select>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>Whether to receive email</td>
+    <td><input type="checkbox">Acceptance</td>
+  </tr>
+  
+  <tr>
+    <td>Interest</td>
+    <td>
+      <input type="checkbox" checked>Movie
+      <input type="checkbox">theater
+      <input type="checkbox">Travel
+      <input type="checkbox">Mountain climbing
+      <input type="checkbox">visting a restaurant
+      <input type="checkbox">Volunteer
+      <input type="checkbox">Etc
+    </td>
+  </tr>
+
+  <!-- checked와 같은 속성은 맨뒤로 -->
+  <tr>
+    <td>Gender</td>
+    <td>
+      <input type="radio" name="gender" checked> Male
+      <input type="radio" name="gender">  Female
+    </td>
+  </tr>
+  
+  <tr>
+    <td>Path learned</td>
+    <td>
+      <select name="" id="">
+        <option value="">Choose</option>
+        <option value="">Cheese</option>
+      </select>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <textarea rows="5" cols="50"></textarea>
+    </td>
+  </tr>
+
+</table>
+
+<!-- table에 추가 하지 않을경우 -->
+<input type="button"  value="Sign Up"> 
+<button type="button">Cancle</button> <hr>
+  
+</body>
+</html> 

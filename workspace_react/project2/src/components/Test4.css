@@ -1,0 +1,10 @@
+.box{
+  margin-top: 10px;
+  width: 400px;
+}
+span{
+  padding: 10px;
+  background-color: cadetblue;
+  color: white;
+  margin: 10px;
+}

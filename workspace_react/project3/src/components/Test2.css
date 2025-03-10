@@ -1,0 +1,23 @@
+.title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.box1{
+  width: 300px;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  margin: 10px 0px;
+  background-color: lightgray;
+}
+
+.box1 > p:nth-child(2){
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.box2{
+  width: 300px;
+  background-color: lightgray;
+  padding: 10px;
+}

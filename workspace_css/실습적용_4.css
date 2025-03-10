@@ -1,0 +1,34 @@
+table{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+  width: 500px;
+  margin: 0px auto;
+}
+
+tr,th,td{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+thead>tr{
+  color: azure;
+  background-color: cadetblue;
+}
+
+tr>th{
+  padding: 8px;
+}
+
+tr>td{
+  text-align: center;
+  padding: 8px;
+}
+
+tr>td:nth-child(2){
+  text-align: left;
+}
+
+tbody>tr:nth-child(even){
+  background-color: gainsboro;
+}

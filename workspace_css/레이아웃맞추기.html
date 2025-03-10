@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="레이아웃맞추기.css">
+</head>
+<body>
+  <!-- 같은 선상에 놓기 위해 하나의 박스로 묶기 -->
+  <div class="inner">
+
+  <table class="table1">
+    <colgroup>
+    <col width="25%">
+    <col width="25%">
+    <col width="25%">
+    <col width="25%">
+    </colgroup>
+
+    <h2>학생 성적표</h2>
+
+    <div class="top-1">
+      2024학년도 2학기 시험성적
+    </div>
+
+    <thead>
+    <tr>
+      <td>No</td>
+      <td>이름</td>
+      <td>학년</td>
+      <td>총점</td>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>홍길동</td>
+      <td>4학년</td>
+      <td>270</td>
+    </tr>
+  </tbody>
+  </table>
+
+  <div class="text-c">
+    *성적표에 석차는 표기되지 않습니다
+  </div>
+
+  <table>
+    <colgroup>
+    <col width="33.3%">
+    <col width="33.3%">
+    <col width="33.3%">
+    </colgroup>
+
+    <h2>상세 정보</h2>
+    <thead>
+    <tr>
+      <td>국어점수</td>
+      <td>영어점수</td>
+      <td>수학점수</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>90</td>
+      <td>85</td>
+      <td>수학</td>
+    </tr>
+  </tbody>
+  </table>
+
+  <div class="but-1">
+    <input  class="input-1" type="button" value="확인">
+    <input class="input-1" type="button" value="수정">
+  </div>
+  </div>
+
+  </body>
+</html>

@@ -1,0 +1,37 @@
+h2{
+  text-align: center;
+}
+
+.lotto{
+  width: 500px;
+  background-color: darkgray;
+  margin: 0 auto;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.num{
+  width: 14%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.display{
+  background-color: crimson;
+  width: 100%;
+  height: 60px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.btn-div {
+  text-align: center;
+  margin-top: 8px;
+}

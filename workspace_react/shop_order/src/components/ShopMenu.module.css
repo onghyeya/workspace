@@ -1,0 +1,26 @@
+.order_menu_div>ul{
+  width: 100%;
+  height: 80px;
+  padding-left: 50px ;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+  background-color: cadetblue;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.order_menu_div li{
+  list-style: none;
+}
+
+/* active 클래스가 적용된 a 태그 */
+a{
+  color: white;
+  text-decoration: none;
+}
+a.active{
+  color: #fde05d;
+}

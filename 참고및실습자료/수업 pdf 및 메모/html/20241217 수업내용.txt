@@ -1,0 +1,65 @@
+20241216수업내용---------------------------------------------
+
+1. postion
+-static : position 속성을 지정하지 않으면 기본으로 갖는 값
+-fixed : 고정, 스크롤이 발생해서 여전히 표현
+-absolute : 고정 (화면 좌상단 기준), 스크롤 되면 움직임
+-realtive : static 기준에서 상대적으로 위치 조정
+* fixed, absolutem relative
+> left, right, top, bottom
+* 포지션을 변경하면 대부분의 태그는 블록 요소로 변경
+*absolute 속성값은 통상적으로 relative  속성값과 함께 씀
+
+ex1
+
+position : absolute;
+top: 20px;
+left: 50px;
+
+2.overflow : 컨텐츠가 영역의 범위를 초과할때 어떻게?
+-overflow : visible; (default)넘쳐흐름
+-overflow : hidden; 넘치는 부분 보이지 않게
+-overflow : scroll; 스크롤 생성(넘치지 않을때도 생성)
+-overflow : auto; 범위를 벗어날대만 스크롤 생성
+
+3. 요소(태그) 보이기/숨김
+display : none; > 공간도 사라짐
+visibility : hidden; > 공간은 그대로 보존
+opacity :0; > 불투명도 조정
+
+20241217수업내용----------------------------------------------
+
+1. 가상클래스
+선택자 : 가상 클래스(hover,first-child 등등);
+
+
+ - 레이아웃 -
+2. flex
+
+부모태그에만 가능
+- dispaly: flex;
+- felx-direction : row/column; (행/열 주축 지정)
+- justify-content : flex-start/flex-end/center/space-between/space-around/space-evenly
+(주축기준 시작/끝/가운데/사이동일간격/동일간격으로감쌈/양옆간격배치)
+- align-items :stretch/flex-start/flex-end/center
+(교차축 기준 길이맞춤/시작점/끝점/가운데 여백x정렬)
+
+자식태그에만 가능
+- align-self:stretch/flex-start/flex-end/center
+(flex아이템이 교차축에 맞게 늘어남/시작점/끝점/가운데 여백x정렬)
+- flex-basis
+(width와 같은 성질)
+
+3. grid
+table > 열의 갯수가 같아야함
+grid > 알아서 갯수가 조절이 됨
+px,%
+
+item
+> grid-area제외 나머지 병합에 쓰이는것
+
+(수업에 없던 내용 : 이미지,float)
+이미지 : 사용할때 설명
+float : 설명x
+> 통상적으로 화면 레이아웃 잡을때 씀(웹사이트 참고)
+> 신문처럼 이미지랑 글을 조화롭게 배치하기 위한것임

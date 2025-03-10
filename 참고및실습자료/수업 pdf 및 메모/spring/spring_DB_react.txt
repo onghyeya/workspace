@@ -1,0 +1,23 @@
+SPRING+DB사용
+
+Spring Data JPA : 공부용으론 적합하진 않음
+- 알아서 쿼리문을 만들어버림
+- 맘대로 컨트롤 불편
+- 간단한 쿼리문을 사용할때 많이 사용
+
+MyBatis Framework
+
+> 실무에서 주로 사용함
+
+
+==================================
+
+
+프로젝트 생성및 세팅
+DB 테이블 생성
+테이블과 연결될 DTO클래스
+1. xml 파일에서 쿼리 작성
+2. mapper interface 에서 쿼리 실행 메서드작성
+3. service interface 에서 기능 실행 메서드 작성
+4. serviceImpl 클래스에서 메서드 구현
+5. controller 에서 serviceImpl 에서 구현한 메서드 호출

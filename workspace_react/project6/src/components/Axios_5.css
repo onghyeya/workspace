@@ -1,0 +1,49 @@
+.t1{
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 900px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.t1 tr,.t1 td{
+  border: 1px solid black;
+}
+
+.t1-tr>td{
+  text-align: center;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+.person{
+  width: 80%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 50px auto;
+}
+
+.person th{
+  border: 1px solid black;
+  padding: 20px;
+}
+.person td{
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.student{
+  width: 90%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 50px auto;
+}
+
+.student th{
+  border: 1px solid black;
+  padding: 10px;
+}
+.student td{
+  border: 1px solid black;
+  padding: 10px;
+}

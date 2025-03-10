@@ -1,0 +1,18 @@
+20250115
+
+=======axios=======
+
+- clint : react
+- server : spring(java 언어를 기반으로 웹기능 추가 (jsp, ser 있음))
+
+- 우리가 쓰고 있는 intallij는 무료 버전이기 때문에 
+spring project을 바로 만들수 없음
+> spring.io 사이트에서 만들어 사용
+
+- 처음엔 헷갈리니까 test 폴더는 열지 않기!!
+
+
+오늘 배우는 걸로 시험
+
+CORS policy: > 개발자들끼리의 약속(정책)
+

@@ -1,0 +1,71 @@
+확장 프로그램설치
+eslint - 문법 확인용
+ - eslint.config.js 파일의 rules 마지막에 아래 두 줄 추가 (이건 프로젝트마다 해줘야함)
+       'react/prop-types': 'off',
+       'no-unused-vars': 'off',
+       'react-hooks/rules-of-hooks': 'off'
+
+prettier - 코드 스타일 맞춤용(수동 저장마다 실행)
+ - 설정에서 format on save 검색해서 체크
+ - 설정에서 default format검색해서 prettier 적용
+
+react 프로젝트 생성 명령어 : npm create vite@latest
+생성한 프로젝트에 라이브러리 설치 명령어 : npm install, npm i
+프로젝트 실행 명령어 : o + enter
+프로젝트 재시작 명령어 : r + enter
+프로젝트 종료 명령어 : q + enter
+
+
+=========== React ===========
+ctrl + j(cmd인지 확인)
+npm create vite@latest (project만들기)
+> project name
+> react
+> javascript
+
+새로만든 프로젝트 폴더 연후
+> npm i(전체 다운)
+> eslint : rules 마지막 전 두줄 추가
+> svg,index.css,App.css,App return 내용 삭제
+> npm run dev(실행)
+> 프로그램을 종료할땐 항상 프로젝트도 종료.
+
+
+===== axios 라이브러리 설치(spring과 데이터 통신에 사용) =====
+> npm install axios
+
+> CROS 허용
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+  server:{
+    proxy: {
+      // 경로가 "/api" 로 시작하는 요청을 대상으로 proxy 설정
+      '/api': {
+        // 요청 전달 대상 서버 주소 설정
+        target: 'http://localhost:8080',
+        // 요청 헤더 host 필드 값을 대상 서버의 호스트 이름으로  변경
+        changeOrigin: true,
+        // 요청 경로에서 '/api' 제거
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      }
+    }
+  }
+})
+
+
+
+> spring > react에 연결
+
+-axios.get('/api/??')
+	.then(()=>{})
+	.catch(()=>{});
+
+
+================= router ==================
+
+1. npm install react-router-dom 설치
+2. main.jsx > <BrowserRouter> 태그안에 <App/> 넣기
+3. App.jsx > <Rortes> 태그 안에 <Route />

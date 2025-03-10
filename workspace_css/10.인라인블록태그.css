@@ -1,0 +1,9 @@
+
+.d1{
+  border: 1px solid black;
+
+  /* 인라인 블록 요소로 변경 */
+  display: inline-block;
+  width: 200px;
+}
+

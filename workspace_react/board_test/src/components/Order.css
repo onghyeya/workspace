@@ -1,0 +1,66 @@
+.container{
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container>div{
+  margin-top: 50px;
+}
+
+.list-table{
+  width: 100%;
+  margin: 10px 0px;
+}
+
+.list-table >thead >tr{
+  background-color: #4471c4;
+  color: white;
+}
+
+.list-table th{
+  padding: 5px;
+}
+
+.list-table tr{
+  background-color: #cfd4ea;
+}
+
+.list-table>tbody tr:nth-child(even){
+  background-color: #e9ebf5;
+}
+
+.list-table>tbody td{
+  padding: 8px;
+}
+
+.detail-table{
+  width: 100%;
+  margin: 10px 0px;
+}
+
+
+.detail-table td{
+  padding: 8px;
+  background-color: #dae2f3;
+}
+
+.detail-table td:nth-child(even){
+  background-color: #e9ebf5;
+}
+
+.click{
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.click tr{
+  color: white;
+  background-color: #7986c0;
+}
+
+.click td{
+  padding: 10px;
+}

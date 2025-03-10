@@ -1,0 +1,44 @@
+.container{
+  display: flex;
+  gap: 10px;
+  margin: 50px auto;
+}
+
+.item_list{
+  width: 48%;
+}
+
+.item_list >table{
+  width: 100%;
+  text-align: center;
+}
+
+.item_list thead th{
+  background-color: cadetblue;
+  color: white;
+  padding: 10px;
+}
+
+.item_list tr{
+  border-bottom: 1px solid rgb(69, 112, 114);
+  border-top: 1px solid rgb(69, 112, 114);
+}
+
+.item_list tr:hover{
+  cursor: pointer;
+  background-color: rgb(103, 150, 150);
+}
+.item_list tr:nth-child(even):hover{
+  cursor: pointer;
+  background-color: rgb(103, 150, 150);
+}
+
+.item_list td{
+  padding: 10px;
+}
+.item_list tbody tr:nth-child(even){
+  background-color: rgba(75, 144, 146, 0.267);
+}
+.detail_div{
+  width: 48%;
+}

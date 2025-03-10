@@ -1,0 +1,44 @@
+
+/* 중복된 속성을 부여하면 가장 마지막 속성이 적용 */
+div{
+  color: red;
+}
+
+div{
+  background-color: green;
+  color: blue;
+}
+
+.p1{
+  color: red;
+}
+
+.p1{
+  background-color: bisque;
+}
+
+/* 
+선택자가 달라도 같은 태그를 가리키면 모두 적용됨 
+단, 다른 선택자에서 같은 속성을 변경하면 선택자의 우선순위에 따라 설정이 적용된다.
+
+-우선순위-
+1. !important style
+2. inline style (html파일에 간략히 style을 지정) 
+3. id 
+4. class
+5. tag 
+*/
+
+.s1{
+  font-style: italic;
+  font-size: 12px;
+}
+
+span{
+  font-size: 20px !important;
+  /* font-size: 20px !important; : 우선순위 강제 변경 */
+}
+
+h5{
+  color: green;
+}

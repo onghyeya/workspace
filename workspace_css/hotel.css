@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{font-family: "Montserrat",sans-serif;}
+/* 너비360px 이미지 세로 200px */
+
+.container{
+  background-color: #e0ffff;
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-box{
+  width: 360px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: white;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.img-box{
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.img-box:hover{
+  scale: 1.1;
+  transition: all 1s;
+}
+
+.img-box>span{
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  color: white;
+}
+
+.img-box>img{
+  width: 100%;
+  height: 100%;
+}
+
+.title-box{
+  width: 100%;
+  height: 100%;
+}
+
+.title-box>p:first-child{
+  font-weight: 600;
+}
+
+.title-box>p:nth-child(2){
+  color: #ffa600;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.title-box>p:nth-child(3){
+  color: #a7a7a7;
+}
+
+.icrons-box{
+  text-align: center;
+  padding: 8px auto;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.bold{
+  font-weight: 600;
+}
+
+.text{
+  padding: 8px auto;
+}
+
+.proflie-box2{
+  padding: 8px auto;
+  display: flex;
+}
+
+.proflie-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.proflie-box>img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+.proflie-box>div:nth-child(1){
+  width: 50%;
+}
+
+.proflie-box p:nth-child(1){
+  font-weight: 600;
+}
+.proflie-box p:nth-child(2){
+  font-size: 0.9rem;
+  color: #494949;
+}
+
+button{
+  border: none;
+  background-color: rgb(101, 224, 70);
+  color:white;
+  padding: 6px 10px;
+}
+

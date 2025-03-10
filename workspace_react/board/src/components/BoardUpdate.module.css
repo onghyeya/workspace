@@ -1,0 +1,27 @@
+.update_table {
+  width: 100%;
+  text-align: left;
+  margin: 20px 0px;
+}
+
+.update_table tr {
+  border-top: 1px solid rgb(56, 118, 121) ;
+  border-bottom: 1px solid rgb(56, 118, 121) ;
+  background-color: rgba(91, 165, 168, 0.349);
+}
+
+.update_table td {
+  padding: 5px;
+}
+
+.update_table td:nth-child(odd) {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(100, 166, 168);
+}
+
+.update_table input {
+  padding: 3px;
+  outline: none;
+}

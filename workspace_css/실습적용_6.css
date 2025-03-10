@@ -1,0 +1,38 @@
+.table_1{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+  width: 600px;
+  margin: 20px auto;
+}
+.table_1>tr,th,td{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; 
+  padding: 8px 0px;
+  
+}
+.table_1>thead{
+  color: aliceblue;
+  background-color: cadetblue;
+}
+
+.table_1>tbody>tr:nth-child(even){
+  background-color: azure;
+}
+
+.table_1>tbody td{
+  text-align: center;
+}
+
+.table_1>tbody td:nth-child(2){
+  text-align: left;
+}
+
+.table_2{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+  width: 600px;
+  margin: 20px auto;
+}
+

@@ -1,0 +1,26 @@
+.join_div{
+  width: 500px;
+  margin: 50px auto;
+  text-align: right;
+}
+
+.join_div>table{
+  width: 100%;
+  text-align: center;
+}
+
+.join_div tbody>tr{
+  border-bottom: 1px solid rgb(69, 112, 114);
+  border-top: 1px solid rgb(69, 112, 114);
+}
+.join_div tbody td{
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+  background-color: rgba(89, 169, 172, 0.363);
+}
+
+.join_div tbody td:first-child{
+  background-color: rgba(75, 144, 146, 0.575);
+}
+

@@ -1,0 +1,14 @@
+- 학습기간 :  html, css, 데이터베이스 
+- 입사후 :  데이터베이스 급상승
+
+SQLD(데이터베이스 다나옴)
+ - 이론 10문제, SQl 40문제
+
+Maria DB 설치 방법
+- https://mariadb.org/download/?t=mariadb&p=mariadb&r=11.6.2&os=windows&cpu=x86_64&pkg=msi&mirror=blendbyte
+(공식 사이트)
+- 컴퓨터에 맞게 설정 되어있음 바로 download 하면 됨.
+
+암호 mariadb
+root 계정으로 로그인
+- 새로운 계정 만들어서 사용

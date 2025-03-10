@@ -1,0 +1,49 @@
+.app{
+  width: 1000px;
+  margin: 0 auto;
+}
+/* 공통 input 태그 디자인 */
+.my-input{
+  border: 1px solid cadetblue;
+  padding: 4px 6px;
+  border-radius: 6px;
+  outline: none;
+}
+
+.my-input:focus{
+  border: 1.5px solid rgb(74, 123, 124);
+}
+
+.wide{
+  width: 100%;
+}
+
+.my-textarea{
+  border: 1px solid cadetblue;
+  padding: 4px 6px;
+  border-radius: 6px;
+  resize: none;
+  outline: none;
+}
+
+/* 공통 button 태그 디자인 */
+.my-button{
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 5px 15px;
+  background-color: cadetblue;
+  color: white;
+  font-weight: bold;
+}
+
+.my-button:hover{
+  cursor: pointer;
+  background-color: rgb(87, 144, 146);
+}
+
+.my-button:active{
+  position: relative;
+  top: 1px;
+  left: 1px;
+}

@@ -1,0 +1,24 @@
+웹 개발 학습 순서
+- html, css, javascript (웹 페이지 제작 3대장) 
+- 프론트 엔드
+- (자바, 파이썬, node.js) 셋 중하나 필수 
+- 백엔드 기초
+
+시작!
+setvlet, jsp(웹 개발의 기본 기술)
+spring + thymeleaf
+spring + react/vue
+
+======= javascript ========
+vscode에서 작성
+html> body끝나기 전에 작성하는게 통상적
+- 문법
+> <script>
+  >>>여기 안에 작성 
+  </script>
+
+- 확인하는 방법 
+> 웹 개발자 console로 확인(F12)
+
+- 실무에서 많이 쓰이는것
+: const(상수)

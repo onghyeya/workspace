@@ -1,0 +1,32 @@
+/* 
+  position 속성 : 요소의 배치방식 지정
+  position: static; > 기본값
+  position 값을 변경하면 대부분의 태그는 block 요소로 변경.
+*/
+
+div{
+  font-size: 3rem;
+  line-height: 150px;
+  width: 90%;
+}
+
+.arrow-span{
+  /* 
+  position을 fixed로 변경하면 
+  top, left, right, bottom 속성도 무조건 변경해야함
+  네개의 속성의 의미 : 떨어진 정도
+  */
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  color: red;
+  /* 테두리를 원으로 줄때에는 50%를 주면 됨 */
+  border-radius: 50%;
+  text-align: center;
+}
+

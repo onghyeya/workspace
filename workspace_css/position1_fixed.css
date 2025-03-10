@@ -1,0 +1,21 @@
+/* 
+  postiion : 태그의 배치를 변경할때 사용
+  1.static : position 속성을 사용하지 않을때 기본값
+  2.fixed : 특정 위치에 태그 고정 스크롤 해도 따라다님 (화면 좌상단 기준)
+  3. absolute : 특정 위치에 태그 고정. 스크롤 따라다니지 않음
+  4. relative : static 위치를 기준으로 상대적으로 배치
+*/
+
+
+.d1{
+  font-size: 3rem;
+  line-height: 100px;
+}
+
+.d2{
+  border: 1px solid black;
+  width: 100px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+}

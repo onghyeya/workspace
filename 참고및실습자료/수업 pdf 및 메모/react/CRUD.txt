@@ -1,0 +1,10 @@
+회원의 CRUD를 만드세요 >> 가장 기본이 되는 기능
+
+CREATE : 삽입(INSERT) > POST
+READ   : 조회(SELECT) > GET
+UPDATE : 수정(UPDATE) > PUT
+DELETE : 삭제(DELETE) > DELETE
+
+RESTful API
+REST로만 이루어진 API
+요청(URL)을 보내는 문법

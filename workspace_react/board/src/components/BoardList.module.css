@@ -1,0 +1,52 @@
+
+.search {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.search div {
+  display: flex;
+  gap: 3px;
+}
+
+.search button {
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  background-color: cadetblue;
+  color: white;
+  font-weight: bold;
+}
+
+.search input {
+  outline: none;
+}
+
+.list_table {
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.list_table > thead > tr {
+  color: white;
+  font-weight: bold;
+  background-color: rgb(100, 166, 168);
+}
+
+.list_table td {
+  border-top: 1px solid rgb(56, 118, 121);
+  border-bottom: 1px solid rgb(56, 118, 121);
+  padding: 5px;
+}
+
+.list_table tr:hover {
+  cursor: pointer;
+}
+
+.list_table > tbody > tr {
+  background-color: rgba(210, 235, 236, 0.432);
+}
+.list_table > tbody > tr:nth-child(even) {
+  background-color: rgba(91, 165, 168, 0.349);
+}

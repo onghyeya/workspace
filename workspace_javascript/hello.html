@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>자바스크립트 시작하기</h2>
+  
+  <script>
+    // javascript 주석
+    console.log('hello javascript~'); // 출력문 
+    // java와 다르게 let으로 퉁침.(int, double, boolean)
+    let num = 5;
+    let num2 = 5.5;
+    let num3 = 'hello';
+    let num4 = "hi";
+    let num5 = true;
+
+    num3 = num;
+
+    // let, const의 차이점
+    // 변수 : 변하는 값 , 상수 :  변하지 않는 값
+    const name = 'kim';
+    // name = 'Lee';
+    // Uncaught TypeError: Assignment to constant variable : const로 선언된 값은 한번 값이 할당 되면 변경 불가
+
+    let data = null; 
+    let data1;
+    console.log(data); // 데이터가 아무것도 없다.
+    console.log(data1); // 변수 선언이 안됐거나, 선언 되었으나 값이 없음.
+    //console.log(myHome);
+    
+    let data_1 = 5;
+    let data_2 = 10;
+    console.log(data_1,data_2,3,'hello');
+
+    let nick_name = '김자바';
+    let addr = '울산시';
+    let score = 80;
+
+    // 이름은 김자바이고, 울산시에 살고 있으며, 제 점수는 80점 입니다.
+    console.log(`내 이름은 ${nick_name}이고, ${addr}에 살고 있으며, 제 점수는 ${score}점 입니다.`);
+
+    let num8 = 7;
+    console.log(num8++);
+    ++num8;
+    num8++;
+
+    let data_3 = true;
+    console.log(!data_3); //false
+
+    console.log(3==3); // true
+    console.log(3=='3'); //true
+    console.log(3==='3'); //false 왜? 자료형이 달라서
+    console.log(10/4); //2.5
+    
+
+
+  </script>
+</body>
+</html>

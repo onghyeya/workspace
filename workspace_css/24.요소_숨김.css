@@ -1,0 +1,30 @@
+div{
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 20px;
+  text-align: center;
+  line-height: 200px;
+}
+
+.d1{
+  background-color: aquamarine;
+}
+
+.d2{
+  background-color: rgb(22, 187, 132);
+  /* 요소는 숨기지만 공간은 살아있음 */
+  /* visibility: hidden; */
+
+  /* 요소와 요소의 공간 모두 사라짐 */
+  /* display: none; */
+
+  /* 불투명도 :0~1
+    있는데 눈에 안보이게 함. (공간 있음) -> 애니메이션 쓸때 자주 쓰임
+  */
+  opacity: 0;
+}
+
+.d3{
+  background-color: rgb(15, 112, 79);
+}

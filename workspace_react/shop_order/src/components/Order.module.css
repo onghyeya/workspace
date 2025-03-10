@@ -1,0 +1,29 @@
+.order_div{
+  width: 500px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+
+.order_div> table{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.order_div tr{
+  border-bottom: 1px solid cadetblue;
+  border-top: 1px solid cadetblue;
+}
+
+.order_div td{
+  padding: 10px;
+  background-color: rgba(75, 144, 146, 0.363);
+  text-align: left;
+}
+
+.order_div td:first-child{
+  background-color: rgba(75, 134, 136, 0.692);
+  text-align: center;
+  color: white;
+}
+

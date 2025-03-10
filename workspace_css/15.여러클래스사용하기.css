@@ -1,0 +1,22 @@
+.basic{
+  background-color: cadetblue;
+}
+
+.large{
+  width: 80%;
+}
+
+.my-input{
+  padding: 4px;
+  border: 1px solid cornflowerblue;
+  /*border-radius: 반지름;*/
+  border-radius:6px ;
+}
+
+.small{
+  width: 60px;
+}
+
+.large{
+  width: 200px;
+}
