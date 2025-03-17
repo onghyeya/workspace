@@ -1,7 +1,8 @@
-import { Image, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native'
+import { Image, Pressable, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
 import { icon } from '../constants/icons'
-import { cartList, cartListData } from '../data/data'
+import { cartListData } from '../data/data'
+import Task from './Task'
 
 
 const CartList = () => {
@@ -49,11 +50,7 @@ const CartList = () => {
       {/* 반복 되는건 컴포넌트로 제작 해보기 */}
       {cartList.map((cartItem,i)=>{
         return(
-          <View style={styles.container} key={i}>
-            <Text style={styles.title}> {cartItem.item} </Text>
-            <Image source={icon.ICON_EDIT} style={styles.img}/>
-            <Image source={icon.ICON_DELETE}/>
-          </View>
+          <Task cartItem={cartItem} key={i} cartList={cartList} setCartList={setCartList}/>
         )
       })}
       
@@ -70,24 +67,5 @@ const styles = StyleSheet.create({
     borderRadius:5,
     padding:10
   },
-  container : {
-    borderWidth:1,
-    marginHorizontal:12,
-    marginVertical:5,
-    backgroundColor:'lightgray',
-    borderRadius:5,
-    flexDirection:'row',
-    alignItems:'center',
-    padding:10,
-    gap:5
-  },
-  title : {
-    flex:1,
-    // borderWidth:1
-    fontSize:17
-  },
-  img:{
-    width:20,
-    height:20
-  }
+
 })
