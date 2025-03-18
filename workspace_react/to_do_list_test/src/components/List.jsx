@@ -3,6 +3,7 @@ import edit from './edit.png'
 import del from './delete.png'
 import * as list from '../data/todoList'
 import Update from './Update'
+import styles from './List.module.css'
 
 
 const List = () => {
@@ -12,15 +13,24 @@ const List = () => {
   const [joinItem,setJoinItem]=useState('');
 
 
-  useEffect(()=>{
-    setJoinItem('')
-  },[toDoList])
+
+  // 새로운 listItem 추가하는 함수
+  const insertToDoList = ()=>{
+    const endId = Math.max(...toDoList.map((item,i)=>{return item.id}))
+    const newItem = {
+      id:endId+1,
+      text:joinItem
+    }
+    if(joinItem != ''){
+      setToDoList([...toDoList,newItem])
+    }
+  }
 
   return (
-    <div>
-      <h2>To Do List</h2>
+    <div className={styles.container}>
+      <h1>To Do List</h1>
       
-      <div>
+      <div className={styles.input_div}>
         <input 
           type="text"
           value={joinItem}
@@ -31,21 +41,14 @@ const List = () => {
         <button 
           type='button'
           onClick={(e)=>{
-            const endId = Math.max(...toDoList.map((item,i)=>{return item.id}))
-            const newItem = {
-              id:endId+1,
-              text:joinItem
-            }
-            if(joinItem != ''){
-              setToDoList([...toDoList,newItem])
-            }
-           
-           
+            insertToDoList();
+            setJoinItem('')
+
           }}
         >등록</button>
       </div>
 
-      <div>
+      <div className={styles.list_div}>
 
         {toDoList.map((item,i)=>{
           return (

@@ -1,0 +1,46 @@
+.update_input_div{
+  display: flex;
+  background-color: lightblue;
+  border-radius: 5px;
+  gap: 5px;
+  padding: 5px;
+}
+
+.update_input_div>input{
+  flex-grow: 1;
+  outline: none;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.update_input_div>button{
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(138, 194, 212);
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+.list_div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightblue;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.list_div>p{
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: rgb(95, 118, 126);
+}
+
+.list_div img{
+  color: rgb(95, 118, 126);
+}
+
+
