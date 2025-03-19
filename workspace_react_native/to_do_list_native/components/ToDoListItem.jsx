@@ -35,36 +35,38 @@ const ToDoListItem = ({ item, toDoList, setToDoList }) => {
     <>
       {isEdit ? (
         //수정할때 뜨는 input 태그
-        <TextInput
-          style={styles.input}
-          autoFocus={true}
-          // 포커스아웃 이벤트
-          onBlur={() => {
-            setIsEdit(false);
-          }}
-          value={updateText}
-          onChangeText={(text) => {
-            setUpdateText(text);
-          }}
-          onSubmitEditing={(e) => {
-            if(updateText !== '')
-            updateList(e);
-          }}
-        />
+       <View style={styles.input_View}>
+          <TextInput
+            style={styles.input}
+            autoFocus={true}
+            // 포커스아웃 이벤트
+            onBlur={() => {
+              setIsEdit(false);
+            }}
+            value={updateText}
+            onChangeText={(text) => {
+              setUpdateText(text);
+            }}
+            onSubmitEditing={(e) => {
+              if(updateText !== '')
+              updateList(e);
+            }}
+          />
+       </View>
       ) : (
         //수정전 보이는 란
-        <View>
-          <Text>{item.text}</Text>
-          <View>
+        <View style={styles.list_view}>
+          <Text style={styles.list_text}>{item.text}</Text>
+          <View style={styles.icon_view}>
             <Pressable
               onPress={(e) => {
                 setIsEdit(true);
               }}
             >
-              <Image source={icon.ICON_EDIT} />
+              <Image source={icon.ICON_EDIT}  style={styles.icons}/>
             </Pressable>
             <Pressable onPress={(e) => {deleteList(e)}}>
-              <Image source={icon.ICON_DELETE} />
+              <Image source={icon.ICON_DELETE} style={styles.icons}/>
             </Pressable>
           </View>
         </View>
@@ -75,4 +77,36 @@ const ToDoListItem = ({ item, toDoList, setToDoList }) => {
 
 export default ToDoListItem;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  input:{
+    borderWidth:1,
+    borderRadius:4,
+    padding:10,
+    backgroundColor:'white'
+  },
+  list_view:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    alignItems:'center',
+    backgroundColor:'lightblue',
+    borderRadius:4,
+    padding:10
+  },
+  icon_view:{
+    flexDirection:'row'
+  },
+  input_View:{
+    padding:10,
+    backgroundColor:'lightblue',
+    borderRadius:4
+  },
+  list_text:{
+    fontSize: 18,
+    fontWeight:'bold',
+    color:'#3E3F5B'
+  },
+  icons:{
+    width:30,
+    height:30
+  }
+});

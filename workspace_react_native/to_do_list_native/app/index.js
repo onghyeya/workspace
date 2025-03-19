@@ -5,7 +5,7 @@ import ToDoList from '../components/ToDoList'
 const MainScreen = () => {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <SafeAreaView>
+      <SafeAreaView style={{flex:1}} >
         <StatusBar
           barStyle={'dark-content'}
           backgroundColor={'darkgray'}
