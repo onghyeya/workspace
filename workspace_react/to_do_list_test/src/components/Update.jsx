@@ -11,6 +11,7 @@ const Update = ({ item, toDoList, setToDoList }) => {
   const [newText, setNewText] = useState("");
 
   const updateList = () => {
+    if(newText!=='')
     setToDoList(
       toDoList.map((list, i) => {
         if (list.id === item.id) {
@@ -20,6 +21,16 @@ const Update = ({ item, toDoList, setToDoList }) => {
       })
     );
   };
+
+  const deleteList=()=>{
+    if(confirm('삭제하실건가요?')){
+      setToDoList(
+        toDoList.filter((list) => {
+          return list.id !== item.id;
+        })
+      );
+    }
+  }
 
   return (
     <>
@@ -64,11 +75,7 @@ const Update = ({ item, toDoList, setToDoList }) => {
             <img
               src={del}
               onClick={(e) => {
-                setToDoList(
-                  toDoList.filter((list) => {
-                    return list.id !== item.id;
-                  })
-                );
+                deleteList(e)
               }}
             />
           </div>
