@@ -9,9 +9,8 @@ const MainScreen = () => {
         <StatusBar
           barStyle={'dark-content'}
           backgroundColor={'darkgray'}
-        >
-          <ToDoList/>
-        </StatusBar>
+        />
+        <ToDoList/>
       </SafeAreaView>
     </TouchableWithoutFeedback>
   )
