@@ -35,8 +35,14 @@ const ToDoList = () => {
           }}
           // enter /전송버튼 눌렀을때 뭐할거야
           onSubmitEditing={(e) => {
-            newList(e);
-            setJoinText("");
+            if(joinText.trimStart() !== ''){
+              alert('Add : ' + joinText)
+              newList(e);
+              setJoinText("");
+            }
+            else{
+              setJoinText("");
+            }
           }}
           style={styles.input}
           placeholder="+ Add a Task"
@@ -83,6 +89,7 @@ const styles = StyleSheet.create({
   list_view:{
     gap:10,
     backgroundColor:'#336D82',
-    padding:10
+    padding:10,
+    borderRadius:5
   }
 });
