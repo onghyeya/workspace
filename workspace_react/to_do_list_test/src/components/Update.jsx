@@ -11,15 +11,17 @@ const Update = ({ item, toDoList, setToDoList }) => {
   const [newText, setNewText] = useState("");
 
   const updateList = () => {
-    if(newText!=='')
-    setToDoList(
-      toDoList.map((list, i) => {
-        if (list.id === item.id) {
-          list.text = newText;
-        }
-        return list;
-      })
-    );
+    if(newText!==''){
+      setToDoList(
+        toDoList.map((list, i) => {
+          if (list.id === item.id) {
+            list.text = newText;
+          }
+          return list;
+        })
+      );
+    }
+   
   };
 
   const deleteList=()=>{

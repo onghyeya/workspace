@@ -29,6 +29,10 @@
   font-weight: bold;
 }
 
+.input_div>button:hover{
+  cursor: pointer;
+}
+
 .list_div{
   padding: 10px;
   background-color:rgba(173, 216, 230, 0.5);

@@ -42,6 +42,8 @@ const Task = ({ cartItem, cartList, setCartList }) => {
     setNewText(cartItem.item);
   }, [cartItem]);
 
+  
+
   return (
     <View style={styles.container}>
       {isEditing ? (

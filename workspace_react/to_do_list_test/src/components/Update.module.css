@@ -23,6 +23,10 @@
   padding: 10px 15px;
 }
 
+.update_input_div>button:hover{
+  cursor: pointer;
+}
+
 .list_div{
   display: flex;
   justify-content: space-between;
@@ -39,8 +43,17 @@
   color: rgb(95, 118, 126);
 }
 
+.list_div>div{
+  display: flex;
+  gap: 10px;
+}
+
 .list_div img{
   color: rgb(95, 118, 126);
+}
+
+.list_div img:hover{
+  cursor: pointer;
 }
 
 
