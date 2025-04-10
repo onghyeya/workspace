@@ -14,4 +14,9 @@ public class UserServiceImpl implements UserService{
   public void join(MemberDTO memberDTO) {
     userMapper.join(memberDTO);
   }
+
+  @Override
+  public MemberDTO getMemberForLogin(String memEmail) {
+    return userMapper.getMemberForLogin(memEmail);
+  }
 }

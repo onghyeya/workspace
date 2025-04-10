@@ -1,6 +1,9 @@
 package com.green.security_exam.config;
 
+import com.green.security_exam.jwt.JwtConfirmFilter;
+import com.green.security_exam.jwt.JwtUtil;
 import com.green.security_exam.jwt.LoginFilter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -21,7 +24,9 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @Configuration // 객체 생성 + 설정 내용이 들어가 있는 클래스임
 @EnableWebSecurity // 해당 클래스가 security 설정을 컨트롤 할 수 있도록 세팅하는 어노테이션
 @EnableMethodSecurity(prePostEnabled = true,securedEnabled = true)
+@RequiredArgsConstructor
 public class SecurityConfig {
+  private final JwtUtil jwtUtil;
 
   // 실제 시큐리티의 인증&인가를 상징하는 코드
   // 우리가 바꿀수 있는건 매개 변수의 변수명 메서드의 자료명 뿐임 설정은 거의 동일한 형태를 가지고 있다.
@@ -41,18 +46,26 @@ public class SecurityConfig {
             .sessionManagement(session-> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             // 인증 및 인가에 대한 설정을 한 부분
             .authorizeHttpRequests(auth->
-                auth.requestMatchers("/test2").authenticated().anyRequest().permitAll() //test2는 인증 된사람만/ test1은 누구나
+                //auth.requestMatchers("/test2").authenticated().anyRequest().permitAll() //test2는 인증 된사람만/ test1은 누구나
                 //auth.anyRequest().permitAll() // 모든 요청에 대해 접근을 허용함
-                //auth.requestMatchers("/test2","/test1").authenticated().anyRequest().permitAll() // , 로 여러개도 인증되게 할수 있음
+                //auth.requestMatchers("/test2","/test1").authenticated() // , 로 여러개도 인증되게 할수 있음
+                auth.requestMatchers("/test2").authenticated()
+                    .requestMatchers("/test3").hasRole("ADMIN")
+                    .anyRequest().permitAll()
             );
+
+    //모든 요청에서 토큰을 검증하는 JwtConfirmFilter 클래스를 SecurityFilterChain에 추가
+    //JwtConfirmFilter 클래스는 LoginFilter 가 진행되기 전에 실행되도록 설정 함
+    http.addFilterBefore(new JwtConfirmFilter(jwtUtil), LoginFilter.class);
 
     // 원래 로그인 요청을 받는 UsernamePasswordAuthenticationFilter 대신
     // 우리가 커스터마이징한 LoginFilter 를 사용하도록 필터 교체
-    http.addFilterAt(new LoginFilter(authenticationManager), UsernamePasswordAuthenticationFilter.class);
+    http.addFilterAt(new LoginFilter(authenticationManager,jwtUtil), UsernamePasswordAuthenticationFilter.class);
 
     return http.build();
   }
 
+  @Bean
   public CorsConfigurationSource corsConfigurationSource(){
     CorsConfiguration config = new CorsConfiguration();
     config.setAllowCredentials(true);
