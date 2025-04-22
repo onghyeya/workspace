@@ -26,7 +26,6 @@ const Login = () => {
     .then(res => {
       alert('로그인 성공');
       dispatch(loginReducer(res.headers['authorization']));
-      
     })
     .catch(e => {
       //로그인 검증 실패 시 서버에서 401 상태코드를 응답
