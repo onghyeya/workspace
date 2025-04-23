@@ -4,9 +4,9 @@ import { Tabs } from "expo-router";
 import Header from '@/components/Header'
 const TabsLayout = () => {
   return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={{flex:1}}>
         <Header/>
-        <View style={styles.tabArea}>
+        <View style={{flex:1}}>
           <Tabs screenOptions={{ headerShown: false }}>
             <Tabs.Screen
               name="(home)"
@@ -35,7 +35,5 @@ const TabsLayout = () => {
 export default TabsLayout;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
+  
 });

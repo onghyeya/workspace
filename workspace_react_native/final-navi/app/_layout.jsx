@@ -27,8 +27,13 @@ export default function RootLayout() {
 
   return (
     <>
-      {/* 핸드폰 상단 상태 바 */}
-      <StatusBar style="auto" />
+      {/* 
+        - 핸드폰 상단 상태 바 
+        translucent : 투명도 및 범위 설정
+        true : 반투명+statusbar 범위 침범
+        false : 불투명 + statusbar 범위 침범x
+      */}
+      <StatusBar style='auto' translucent={false} />
       <Stack screenOptions={{ headerShown: false }} />
     </>
   );
