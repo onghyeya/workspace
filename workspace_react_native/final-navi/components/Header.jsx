@@ -1,53 +1,84 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
-import React from "react";
-import { useRouter } from "expo-router";
+import { Pressable, StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+import { useRouter } from 'expo-router'
+import { useDispatch, useSelector } from 'react-redux';
+import { getUserSubFromToken } from '../redux/authHelper';
+import * as SecureStore from 'expo-secure-store';
+import { logoutReducer } from '../redux/authSlice';
 
 const Header = () => {
   const router = useRouter();
+  const auth = useSelector(state => state.auth);
+
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    SecureStore.deleteItemAsync('accessToken') // 토큰도 없애고 
+    .then(() => {
+      console.log("SecureStore 삭제 완료");
+      dispatch(logoutReducer()); // isLogin=false로
+      router.replace('/') // index로 다시 돌아감
+    })
+    .catch(error => console.error("SecureStore 오류:", error));
+  };
+
   return (
     <View style={styles.headerContainer}>
-      <Text style={styles.headerTitle}>FARMDAS</Text>
+      <Text style={styles.headerTitle}>Header</Text>
       <View style={styles.loginStatus}>
-        <Pressable
-          onPress={() => {
-            router.push("/auth/login");
-          }}
-        >
-          <Text style={styles.text}>LOGIN</Text>
-        </Pressable>
-        <Pressable
-          onPress={() => {
-            router.push("/auth/signUp");
-          }}
-        >
-          <Text style={styles.text}>JOIN</Text>
-        </Pressable>
+        
+        {
+          auth.isLogin 
+          ? 
+          <>
+            <Text>{getUserSubFromToken(auth.token)} 님 반갑습니다.</Text>
+            <Pressable onPress={handleLogout}>
+              <Text>Logout</Text>
+            </Pressable>
+          </>
+          :
+          <>
+            <Pressable onPress={() => router.push('/auth/login')}>
+              <Text>Login</Text>
+            </Pressable>
+            
+            <Pressable onPress={() => router.push('/auth/join')}>
+              <Text>Join</Text>
+            </Pressable>
+          </>
+        }
+
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
 
 const styles = StyleSheet.create({
-  headerContainer: {
-    height: 70,
-    backgroundColor: "green",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems:'center',
-    padding:"20px",
+  headerContainer:{
+    height:70,
+    backgroundColor:'orange'
   },
-  headerTitle: {
-    fontSize: 30,
-    color: "white",
+  headerTitle:{
+    fontSize:30,
+    color:'white'
   },
-  loginStatus: {
-    flexDirection: "row",
-    gap: "12px",
-    marginTop: "20px",
-  },
-  text: {
-    color: "white",
-  },
-});
+  loginStatus :{
+    flexDirection : 'row',
+    justifyContent : 'flex-end',
+    gap: 12,
+    paddingRight: 12
+  }
+})
+
+
+
+
+
+
+
+
+
+
+

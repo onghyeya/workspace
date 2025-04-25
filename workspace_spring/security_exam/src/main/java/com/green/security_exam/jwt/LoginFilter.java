@@ -91,8 +91,11 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
     GrantedAuthority auth = iterator.next();
     String role = auth.getAuthority(); //로그인한 사람의 권한!!!
 
+    String clientType =  request.getHeader("clientType"); // app > app , web > null
+    clientType =  clientType==null? "web":clientType;
+
     //토큰 생성
-    String accessToken = jwtUtil.createJwt(username, role, (1000 * 60 * 30)); //30분 (1000==1초 /60==1분)
+    String accessToken = jwtUtil.createJwt(username, role, (1000 * 60 * 30),clientType); //30분 (1000==1초 /60==1분)
 
     //생성한 토큰을 응답 헤더에 담아 클라이언트에 전달
     response.setHeader("Access-Control-Expose-Headers", "Authorization"); // Authorization 접근권한 해제시켜 보여줌
