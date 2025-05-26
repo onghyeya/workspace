@@ -30,7 +30,10 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   listContainer: {
-    marginVertical: 20,
+    backgroundColor:colors.GRAY_200,
+    gap:10,
+    paddingHorizontal:8,
+    paddingVertical:8,
   },
   writeBtn:{
     position:'absolute',

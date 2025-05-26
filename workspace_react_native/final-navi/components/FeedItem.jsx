@@ -38,6 +38,9 @@ export default FeedItem;
 const styles = StyleSheet.create({
   feedContainer: {
     padding: 20,
+    backgroundColor:'white',
+    borderRadius:10
+
   },
   menuContainer: {
     flexDirection: "row",
@@ -50,7 +53,7 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent:'center',
     alignItems:'center',
-    paddingVertical:16,
+    paddingVertical:8,
     gap:5,
   },
   title:{
